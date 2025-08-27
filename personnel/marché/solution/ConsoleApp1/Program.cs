@@ -87,7 +87,7 @@ namespace solution
                     new Product { Location = 15, Producer = "Crizzi", ProductName = "Myrtilles", Quantity = 12,Unit = "kg", PricePerUnit = 5.50 },
                     new Product { Location = 15, Producer = "Crizzi", ProductName = "Groseilles", Quantity = 12,Unit = "kg", PricePerUnit = 5.50 }
                 };
-            int count = 0;
+            /*int count = 0;
             int maxPastege = 0;
             foreach (var product in products)
             {
@@ -108,7 +108,15 @@ namespace solution
             }
             Console.WriteLine($"Il y a {count} de vendeurs de Pêches");
             Console.WriteLine($"Le max de pasteque est {maxPastege}");
+            Console.ReadLine();*/
+            //LINQ
+            List<Product> productsLINQ = products.Where(prod => prod.ProductName == "Pêches").ToList();
+            Console.WriteLine($"Il y a {productsLINQ.Count} vendeurs de Pêches");
+            //
+            // WIP: Do second exercice
+            //
             Console.ReadLine();
+
         }
     }
 }
